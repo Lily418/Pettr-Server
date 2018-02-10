@@ -1,0 +1,22 @@
+{
+  "cats": [
+    {
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          51.511698,
+          -0.129828
+        ]
+      }
+    },
+    {
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          51.511387,
+          -0.128396
+        ]
+      }
+    }
+  ]
+}

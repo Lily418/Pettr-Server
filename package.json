@@ -1,0 +1,25 @@
+{
+  "name": "pettr-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lily418/Pettr-Server.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lily418/Pettr-Server/issues"
+  },
+  "homepage": "https://github.com/Lily418/Pettr-Server#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.2",
+    "node-fetch": "^2.0.0"
+  }
+}
