@@ -3,12 +3,13 @@ const mongodb = require("./mongodb")
 const seed = require("./seed.json")
 const fetch = require("node-fetch")
 
+
+
 const getCatImageBuffer = () => {
   return fetch("http://thecatapi.com/api/images/get").then((response) => {
     return response.buffer()
   })
 }
-
 
 mongodb.connect.then((client) => {
    return mongodb.cats(client).drop()

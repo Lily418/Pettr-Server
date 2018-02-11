@@ -1,8 +1,10 @@
 const MongoClient = require("mongodb").MongoClient
-const url = "mongodb://localhost:27017"
-const dbName = "Pettr";
+const config = require("config")
 
-const connect = MongoClient.connect(url)
+const url = "mongodb://localhost:27017"
+const dbName = config.get("dbConfig.dbName")
+
+const connect = MongoClient.connect(config.get("dbConfig.mongoConnectionString"))
 
 const cats = (client) => {
   return client.db(dbName).collection("cats")

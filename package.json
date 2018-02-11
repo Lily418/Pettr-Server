@@ -18,7 +18,10 @@
   "homepage": "https://github.com/Lily418/Pettr-Server#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "config": "^1.29.4",
     "express": "^4.16.2",
+    "express-mongo-db": "git+https://github.com/Lily418/express-mongo-db.git",
     "mongodb": "^3.0.2",
     "node-fetch": "^2.0.0"
   }
