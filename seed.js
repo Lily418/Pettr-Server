@@ -6,7 +6,7 @@ const fetch = require("node-fetch")
 
 
 const getCatImageBuffer = () => {
-  return fetch("http://thecatapi.com/api/images/get").then((response) => {
+  return fetch("http://thecatapi.com/api/images/get?type=jpg").then((response) => {
     return response.buffer()
   })
 }
