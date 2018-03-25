@@ -22,7 +22,7 @@ mongodb.connect.then((client) => {
   })
 }).then((cats) => {
   return Promise.join(mongodb.connect, cats, (client, cats) => {
-    const lotsOfCats = Array(25).fill().map((e, i)=> Object.assign({}, cats[0], cats[i], {index: i}))
+    const lotsOfCats = Array(100).fill().map((e, i)=> Object.assign({}, cats[0], cats[i], {index: i}))
     console.log(cats)
 
     console.log("Lots", lotsOfCats.map((e)=>e.location.coordinates))

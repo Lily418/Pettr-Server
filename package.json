@@ -25,5 +25,8 @@
     "mongodb": "^3.0.2",
     "multer": "^1.3.0",
     "node-fetch": "^2.0.0"
+  },
+  "scripts": {
+    "start": "nodejs index.js"
   }
 }

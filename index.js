@@ -12,6 +12,7 @@ app.use(expressMongoDb(config.get("dbConfig.mongoConnectionString"), config.get(
 
 app.get("/cat", (req, res) => { 
   const location = JSON.parse(req.query.location)
+  console.log(`GET /cat location=${location}`)
   return req.db.collection("cats").find({
     location: {
       $nearSphere: {

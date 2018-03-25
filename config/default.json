@@ -1,6 +1,6 @@
 {
   "dbConfig": {
-    "mongoConnectionString": "mongodb://localhost:27017",
+    "mongoConnectionString": "mongodb://mongodb:27017",
     "dbName": "Pettr"
   }
 }
