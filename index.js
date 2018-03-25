@@ -21,8 +21,11 @@ app.get("/cat", (req, res) => {
            }
       }
     }
-  }).toArray().then((cats) => {
+  }).limit(25).toArray().then((cats) => {
     return res.status(200).json(cats);
+  }).catch((err) => {
+    console.error(err);
+    return res.status(500).json({ "error" : "Could not get cats"})
   })
 })
 
@@ -46,4 +49,4 @@ app.put("/cat", upload.single('cat'), (req, res) => {
   })
 })
 
-app.listen(3000, () => console.log("Example app listening on port 3000!"))
+app.listen(3000, () => console.log("Pettr Server listening on port 3000"))
