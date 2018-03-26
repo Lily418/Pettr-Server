@@ -3,7 +3,7 @@ version: "3.4"
 
 services:
   app:
-    build: ./
+    build: .
     ports:
       - "80:3000"
     volumes:
