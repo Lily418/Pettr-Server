@@ -1,4 +1,5 @@
 const expressMongoDb = require("express-mongo-db")
+const mongodb = require("./mongodb")
 const express = require("express")
 const config = require("config")
 const multer = require("multer")
@@ -6,7 +7,9 @@ const app = express()
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
-let connect = null
+mongodb.connect.then((client) => {
+  mongodb.ensureIndexes(client)
+})
 
 app.use(expressMongoDb(config.get("dbConfig.mongoConnectionString"), config.get("dbConfig.dbName")));
 
@@ -22,7 +25,7 @@ app.get("/cat", (req, res) => {
            }
       }
     }
-  }).limit(25).toArray().then((cats) => {
+  }).limit(1).toArray().then((cats) => {
     return res.status(200).json(cats);
   }).catch((err) => {
     console.error(err);
